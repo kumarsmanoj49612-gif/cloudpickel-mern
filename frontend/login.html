@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: 20px;
+            display: none;
+            margin-top: 20px;
+        }
+
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
+
+    <script>
+        function Student() {
+            document.getElementById("student").style.display = "block";
+            document.getElementById("admin").style.display = "none";
+        }
+
+        function Admin() {
+            document.getElementById("admin").style.display = "block";
+            document.getElementById("student").style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Login Page</h2>
+
+<button onclick="Student()">Student</button>
+<button onclick="Admin()">Admin</button>
+
+<div id="student" class="box">
+    <h3>Student Login</h3>
+    <form>
+        <input type="text" placeholder="Register No." required><br>
+        <input type="password" placeholder="Password" required><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<div id="admin" class="box">
+    <h3>Admin Login</h3>
+    <form>
+        <input type="text" placeholder="Email ID" required><br>
+        <input type="password" placeholder="Password" required><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+</body>
+</html>
