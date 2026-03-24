@@ -4,10 +4,10 @@ const userSchema =  new mangoose.Schema({
     email: {type: String,unique: true},
     password:{type: String, required: true},
     studentRegNo:{type:String},
-    
-     
-role:{type:String,
-     enum:["admin","student"],
-     default:"student"}
-});
+    role:{type:String,
+    enum:["admin","student"],
+    default:"student"}
+}
+,{timestamps:true}
+);
 module.exports=mangoose.model("User", userSchema);
